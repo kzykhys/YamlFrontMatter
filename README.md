@@ -20,7 +20,7 @@ Create or update your composer.json and run `composer update`
 ``` json
 {
     "require": {
-        "kzykhys/front-matter": ">=1.0"
+        "kzykhys/yaml-front-matter": ">=1.0"
     }
 }
 ```
