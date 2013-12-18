@@ -1,0 +1,22 @@
+{
+    "name": "kzykhys/yaml-front-matter",
+    "description": "YAML Front-matter Parser/Dumper for PHP",
+    "license": "MIT",
+    "keywords": ["yaml", "front-matter", "parser"],
+    "authors": [
+        {
+            "name": "Kazuyuki Hayashi",
+            "email": "hayashi@valnur.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/yaml": ">=2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
