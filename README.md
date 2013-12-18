@@ -1,6 +1,10 @@
 YAML Front-matter Parser/Dumper for PHP
 =======================================
 
+[![Latest Stable Version](https://poser.pugx.org/kzykhys/yaml-front-matter/v/stable.png)](https://packagist.org/packages/kzykhys/yaml-front-matter)
+[![Build Status](https://travis-ci.org/kzykhys/YamlFrontMatter.png?branch=master)](https://travis-ci.org/kzykhys/YamlFrontMatter)
+[![Coverage Status](https://coveralls.io/repos/kzykhys/YamlFrontMatter/badge.png)](https://coveralls.io/r/kzykhys/YamlFrontMatter)
+
 A PHP [YAML Front-matter](http://jekyllrb.com/docs/frontmatter/) parser/dumper using symfony/yaml.
 
 Requirements
