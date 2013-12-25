@@ -13,6 +13,16 @@ class FrontMatter
     /**
      * @param $input
      *
+     * @return int
+     */
+    public static function isValid($input)
+    {
+        return preg_match('/^-{3}\r?\n(.*)\r?\n-{3}\r?\n/s', $input) == 1;
+    }
+
+    /**
+     * @param $input
+     *
      * @return Document
      */
     public static function parse($input)

@@ -52,4 +52,13 @@ layout: layout.html
         $this->assertEquals($content, $document->getContent());
     }
 
+    public function testIsValid()
+    {
+        $content = file_get_contents(__DIR__ . '/Resources/markdown.md');
+        $this->assertTrue(FrontMatter::isValid($content));
+
+        $content = file_get_contents(__DIR__ . '/Resources/invalid.html');
+        $this->assertFalse(FrontMatter::isValid($content));
+    }
+
 } 
