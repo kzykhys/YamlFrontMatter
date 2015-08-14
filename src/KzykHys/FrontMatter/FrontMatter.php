@@ -15,9 +15,9 @@ class FrontMatter
      *
      * @return int
      */
-    public static function isValid($input)
+    public static function isValid($input, $format = '/^-{3}\r?\n(.*)\r?\n-{3}\r?\n/s')
     {
-        return preg_match('/^-{3}\r?\n(.*)\r?\n-{3}\r?\n/s', $input) == 1;
+        return preg_match($format, $input) == 1;
     }
 
     /**
@@ -25,9 +25,9 @@ class FrontMatter
      *
      * @return Document
      */
-    public static function parse($input)
+    public static function parse($input, $format = '/^-{3}\r?\n(.*)\r?\n-{3}\r?\n/s')
     {
-        if (!preg_match('/^-{3}\r?\n(.*)\r?\n-{3}\r?\n/s', $input, $matches)) {
+        if (!preg_match($format, $input, $matches)) {
             return new Document($input);
         }
 
