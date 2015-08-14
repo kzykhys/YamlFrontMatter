@@ -42,10 +42,10 @@ class FrontMatter
      *
      * @return string
      */
-    public static function dump(Document $document)
+    public static function dump(Document $document, $format = "---\n%s\n---\n%s")
     {
         return sprintf(
-            "---\n%s\n---\n%s",
+            $format,
             trim(Yaml::dump($document->getConfig())),
             $document->getContent()
         );
