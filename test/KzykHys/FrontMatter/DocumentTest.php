@@ -7,6 +7,11 @@ use KzykHys\FrontMatter\Document;
 class DocumentTest extends PHPUnit_Framework_TestCase
 {
 
+    public function testJSON() {
+        $document = new Document('<body>hello</body>', array('title' => 'test', 'category' => 'default'));
+        $this->assertJson(json_encode($document));
+    }
+
     public function testDocument()
     {
         $document = new Document('<body>hello</body>', array('title' => 'test', 'category' => 'default'));
