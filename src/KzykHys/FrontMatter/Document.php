@@ -5,7 +5,7 @@ namespace KzykHys\FrontMatter;
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
  */
-class Document implements \ArrayAccess, \IteratorAggregate, JsonSerializable
+class Document implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
 {
 
     /**
