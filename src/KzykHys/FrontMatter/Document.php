@@ -5,7 +5,7 @@ namespace KzykHys\FrontMatter;
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
  */
-class Document implements \ArrayAccess, \IteratorAggregate
+class Document implements \ArrayAccess, \IteratorAggregate, JsonSerializable
 {
 
     /**
@@ -161,6 +161,17 @@ class Document implements \ArrayAccess, \IteratorAggregate
         }
 
         return $itemA;
+    }
+
+
+    /**
+     * 
+     * @return array
+     */
+    public function jsonSerialize() {
+        return array_merge([
+            'content' => $this->content,
+        ], $this->config);
     }
 
 }
