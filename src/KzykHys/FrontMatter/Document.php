@@ -169,9 +169,9 @@ class Document implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
      * @return array
      */
     public function jsonSerialize() {
-        return array_merge([
+        return array_merge($this->config,[
             'content' => $this->content,
-        ], $this->config);
+        ]);
     }
 
 }
